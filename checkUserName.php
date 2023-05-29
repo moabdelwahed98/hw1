@@ -1,0 +1,26 @@
+<?php
+    /*******************************************************
+        Controlla che l'username sia unico
+    ********************************************************/
+    
+    require_once 'dbconfig.php';
+
+    if (!isset($_GET["q"])) {
+        exit;
+    }
+
+    header('Content-Type: application/json');
+    
+    $conn = mysqli_connect($dbconfig['host'], $dbconfig['user'], $dbconfig['password'], $dbconfig['name']);
+
+    $username = mysqli_real_escape_string($conn, $_GET["q"]);
+
+    $query = "SELECT username FROM users WHERE username = '$username'";
+
+    $res = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
+    $json_array = (array('exists' => mysqli_num_rows($res) > 0 ? true : false));
+    $json = json_encode($json_array);
+    echo $json;
+    mysqli_close($conn);
+?>

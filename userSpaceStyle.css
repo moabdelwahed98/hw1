@@ -1,0 +1,167 @@
+/* Login Section */
+:root{
+    --error-color: rgb(184, 0, 0);
+}
+header{
+    background: linear-gradient(#141e30, #243b55);
+}
+.logo a{
+    color: #eee;
+}
+footer{
+    background-color: #222;
+    color: #eee;
+    pointer-events: none;
+}
+footer p,
+footer a,
+footer h4{
+    color: #eee;
+}
+.login_sign{
+    display: flex;
+    background: linear-gradient(#141e30, #243b55);
+    justify-content: center;
+    align-items: center;
+}
+main{
+    height: auto;
+    min-height: 70%;
+    width: auto;
+    padding: 40px;
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+}
+main h2{
+    margin-bottom: 20px;
+    padding: 0;
+    color: #eee;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+}
+.signupLink{
+    margin: 0;
+    display: flex;
+}
+#log{
+    display: flex;
+    flex-direction: column;
+
+}
+#log #send{
+    border: none;
+    height: 45px;
+    width: 100px;
+    color: rgb(205, 205, 205);
+    background-color: var(--main-color);
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+#log #send:hover{
+    color: #fff;
+}
+#log input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+#log label{
+    color: #eee;
+}
+#log p{
+    margin-bottom: 0;
+}
+.signupLink h4{
+    font-weight: 300;
+    margin-right: 10px;
+    color: #eee;
+    font-size: 15px;
+}
+.signupLink a{
+    text-decoration: none;
+    color: var(--main-color);
+}
+.signupLink a:hover{
+    color: var(--error-color);
+    border-bottom: 1px solid var(--main-color);
+}
+/* End Login Section */
+
+/* ********************************************************************** */
+
+/* Sign_Up Section */
+
+#sign_up{
+    display: flex;
+    flex-direction: column;
+}
+#sign_up #send{
+    border: none;
+    height: 50px;
+    width: 120px;
+    color: rgb(205, 205, 205);
+    background-color: var(--main-color);
+    border-radius: 5px;
+    font-size: 20px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+#sign_up #send:hover{
+    color: #fff;
+}
+#sign_up input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+#sign_up label{
+    color: #eee;
+}
+#sign_up p:not(:last-child){
+    margin-bottom: 0;
+    width: 100%;
+}
+
+/* ********************************************* */
+
+.hidden-form{
+    display: none;
+}
+.errori{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.errori img{
+    width: 20px;
+    margin-right: 10px;
+    padding: 3px;
+    background-color: var(--error-color);
+    border-radius: 3px;
+}
+.errori span{
+    font-size: 15px;
+    color: var(--error-color);
+}
